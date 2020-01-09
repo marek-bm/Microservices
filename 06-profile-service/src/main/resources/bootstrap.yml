@@ -2,3 +2,13 @@ spring:
   cloud:
     config:
       uri: http://localhost:8191
+
+
+############################################################################
+# Alternative configuration
+# 1) Go to application.properties in config-server (my custom name) project
+# 2) Open git-hub uri
+# 3) Copy properties to application.properties in current project
+# 4) Remove bootstrap.yml
+# 5) spring-cloud-starter-config dependency no longer needed
+############################################################################
