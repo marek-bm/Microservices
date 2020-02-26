@@ -25,6 +25,8 @@ public class AuthorizationServerConfig implements AuthorizationServerConfigurer 
     @Autowired
     AuthenticationManager authenticationManager;
 
+    //TokenStore to keep token in db.
+    // Been needed in overridden endpointsConfigurer config method
     @Bean
     TokenStore jdbcTokenStore(){
         return new JdbcTokenStore(dataSource);

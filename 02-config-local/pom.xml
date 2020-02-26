@@ -9,9 +9,9 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.mj.app.rental</groupId>
-    <artifactId>demo</artifactId>
+    <artifactId>config-local</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>demo</name>
+    <name>config-local</name>
     <description>Cloud config local</description>
 
     <properties>
