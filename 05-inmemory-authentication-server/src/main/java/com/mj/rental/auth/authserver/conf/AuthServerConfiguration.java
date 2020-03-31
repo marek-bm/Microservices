@@ -12,6 +12,10 @@ import org.springframework.security.oauth2.config.annotation.web.configuration.A
 import org.springframework.security.oauth2.config.annotation.web.configurers.AuthorizationServerEndpointsConfigurer;
 import org.springframework.security.oauth2.config.annotation.web.configurers.AuthorizationServerSecurityConfigurer;
 
+/*
+ * extends WebSecurityConfigurerAdapter needed to have access to authenitcation manager
+ * Authentication manager must be declared as a bean in newer spring boot versions
+ */
 @Configuration
 public class AuthServerConfiguration extends WebSecurityConfigurerAdapter implements AuthorizationServerConfigurer {
 
@@ -35,7 +39,7 @@ public class AuthServerConfiguration extends WebSecurityConfigurerAdapter implem
     @Override
     public void configure(ClientDetailsServiceConfigurer client) throws Exception {
         client.inMemory()
-                .withClient("web")
+                .withClient(" ")
                 .secret(passwordEncoder.encode("webpass"))
                 .scopes("READ", "WRITE")
                 .authorizedGrantTypes("password", "authorization_code");
